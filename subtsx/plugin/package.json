@@ -1,0 +1,15 @@
+{
+  "name": "subtsx-plugin",
+  "version": "0.1.0",
+  "private": true,
+  "description": "SubTSX Electron-Main Plugin",
+  "main": "subtsx.js",
+  "scripts": {
+    "build": "esbuild src/subtsx.ts --bundle --minify --platform=node --outfile=subtsx.js"
+  },
+  "author": "kyle.howen@subinitial.com",
+  "devDependencies": {
+    "@types/node": "^20.8.9",
+    "esbuild": "0.19.4"
+  }
+}

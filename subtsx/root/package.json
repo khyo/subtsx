@@ -1,0 +1,15 @@
+{
+  "name": "subtsx-lib",
+  "version": "0.1.0",
+  "private": true,
+  "description": "SubTSX Browser Window Bundled Libraries",
+  "main": "lib.ts",
+  "scripts": {
+    "build": "esbuild src/lib.ts --tree-shaking=false --bundle --minify --outfile=lib.js"
+  },
+  "author": "kyle.howen@subinitial.com",
+  "devDependencies": {
+    "esbuild": "^0.19.5",
+    "preact": "^10.18.1"
+  }
+}
