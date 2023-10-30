@@ -14,6 +14,8 @@ class TsxElectron(Electron):
         self.install_esbuild = Installation(version=vars.ESBUILD_VERSION)
 
     def launch(self):
+        self.install_esbuild.ensure_installed()
+        
         plugin = f'plugin:{vars.lib_dir.joinpath("plugin", "subtsx.js")}'
 
         plugin_options = dict(
