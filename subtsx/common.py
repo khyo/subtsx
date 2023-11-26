@@ -1,10 +1,7 @@
 from pathlib import Path
 from typing import Optional, Any
 import typing
-import subelectron.common
 
-
-se_vars = subelectron.common.vars
 
 
 class vars:

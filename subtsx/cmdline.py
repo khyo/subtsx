@@ -2,7 +2,7 @@
 import argparse, subprocess, os, shutil
 from .common import *
 from .version import VERSION
-import subelectron.shortcut as shortcut
+import subpack.shortcut as shortcut
 from .esbuild import EsBuild
 
 def sh(cmd, shell=True, **kwargs):
@@ -70,7 +70,8 @@ def build(args):
         "--sourcemap",
         "--sourcemap",
         "--outfile=dist/out.js",
-        "--jsx-factory=h",
+        "--jsx-inject=import {createElement, Fragment, hmr} from 'voby';"
+        "--jsx-factory=createElement",
         "--jsx-fragment=Fragment",
     )
     

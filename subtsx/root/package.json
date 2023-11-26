@@ -10,6 +10,6 @@
   "author": "kyle.howen@subinitial.com",
   "devDependencies": {
     "esbuild": "^0.19.5",
-    "preact": "^10.18.1"
+    "voby": "^0.57.1"
   }
 }
