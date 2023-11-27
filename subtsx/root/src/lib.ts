@@ -1,10 +1,8 @@
-import * as preact from 'preact'
-import * as preact_hooks from 'preact/hooks'
+import * as voby from 'voby'
 
 // @ts-ignore
-window.h = preact.h
+window.h = voby.h
 // @ts-ignore
-window.Fragment = preact.Fragment
-window.preact = preact
+window.voby = voby
 // @ts-ignore
-window.preact.hooks = preact_hooks
+window.Fragment = voby.Fragment

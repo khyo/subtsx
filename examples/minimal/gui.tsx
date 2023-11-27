@@ -1,29 +1,21 @@
 /// <reference types="./types" />
 import "./styles.css"
 
-const  { render } = preact
-const  { useState } = preact.hooks
-
+const { $, $$, render } = voby
 
 function App() {
-  const [count, setCount] = useState(0x45)
-  console.log("count", count)
+  const value = $(0)
+  const increment = () => value(v => v + 1);
+  const decrement = () => value(v => v - 1);
+
   return (
     <>
-      <h1>Hello World</h1>
-      <div class="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>gui.tsx</code>
-        </p>
-      </div>
-      <p class="read-the-docs">
-        Click on the Vite and Preact logos to learn more
-      </p>
+      <h1>Counter</h1>
+      <p>{value}</p>
+      <button onClick={increment}>+</button>
+      <button onClick={decrement}>-</button>
     </>
-  )
+  );
 }
 
 

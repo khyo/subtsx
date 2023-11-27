@@ -11,15 +11,15 @@ class TsxElectron(Electron):
         
         super().__init__(title, electron_version, p.parent)
         self.entry = p.name
-        self.install_esbuild = Installation(version=vars.ESBUILD_VERSION)
+        self.esbuild = EsBuild(version=vars.ESBUILD_VERSION)
 
     def launch(self):
-        self.install_esbuild.ensure_installed()
+        self.esbuild.install.ensure_installed()
         
         plugin = f'plugin:{vars.lib_dir.joinpath("plugin", "subtsx.js")}'
 
         plugin_options = dict(
-            esbuild=str(self.install_esbuild.exe),
+            esbuild=str(self.esbuild.install.artifact),
             wd=str(self.proj_dir), 
             entry=self.entry,
             cache=str(self.cache),
