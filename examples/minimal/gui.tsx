@@ -1,7 +1,8 @@
-/// <reference types="./types" />
 import "./styles.css"
 
 const { $, $$, render } = voby
+
+
 
 function App() {
   const value = $(0)

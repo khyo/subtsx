@@ -12,3 +12,7 @@ pip install https://github.com/khyo/subtsx
 # verify cmdline tool is installed
 subtsx --help
 ```
+
+## Example Usage
+
+see `./example/minimal/`
