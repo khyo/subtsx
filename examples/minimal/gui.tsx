@@ -3,7 +3,6 @@ import "./styles.css"
 const { $, $$, render } = voby
 
 
-
 function App() {
   const value = $(0)
   const increment = () => value(v => v + 1);

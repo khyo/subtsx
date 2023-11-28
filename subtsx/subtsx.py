@@ -13,8 +13,8 @@ class TsxElectron(Electron):
         self.entry = p.name
         self.esbuild = EsBuild(version=vars.ESBUILD_VERSION)
     
-    def ensure_types(self, path: Path | None = None):
-        path = path or Path.cwd()
+    def ensure_types(self, path: Path | str = "."):
+        path = Path(path)
         tdir = path.joinpath("node_modules", "@types")
         if tdir.joinpath("subtsx").exists():
             return

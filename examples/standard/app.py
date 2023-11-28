@@ -8,6 +8,7 @@ def main():
     # logging.basicConfig(level=logging.INFO)
     
     te = TsxElectron("TsxStandard", "gui/index.tsx")
+    te.ensure_types("gui")
 
     # Register some event handlers before we launch.
     te.on('js-sourced-event', lambda e, arg: print(f"JS sent an event:", e, arg))

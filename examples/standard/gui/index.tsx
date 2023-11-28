@@ -1,24 +1,25 @@
-/// <reference types="./types" />
 import "./styles.css"
 
+import { Widget } from './widget'
 import { delay } from './lib'
-const  { render } = preact
-const  { useState } = preact.hooks
+const { $, $$, render } = voby
+
 
 
 function App() {
-  const [count, setCount] = useState(0x45)
-  console.log("count", count)
+  const count = $(0x45)
+  console.log("count", count())
   return (
     <>
       <h1>Hello World</h1>
       <a>ASDF</a>
-      <button onClick={() => setCount((count) => count + 1)}>
+      <button onClick={() => count((count) => count + 1)}>
         count is {count}
       </button>
       <p>
         Edit <code>gui/index.tsx</code>
       </p>
+      <Widget />
     </>
   )
 }
